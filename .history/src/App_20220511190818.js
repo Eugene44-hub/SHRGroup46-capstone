@@ -1,11 +1,9 @@
 import { lazy, Suspense } from "react";
 import { Route, Routes,BrowserRouter as Router } from "react-router-dom";
 
-//read through comments on each component and pages to understand properly 
+//read through comments on each component to understand properly 
 
-// only tailwind and css modules are used in this project, any additional libraries should be told to the lead before installation
-
-//Note: you can use normal import statement on the pages. Lazy load is for only Routing pages
+//Note: you can use normal import statement on the pages lazy load is for only Routing pages
 
 // API's too have been fetched in utility folder you can import and use with the syntax below
 
