@@ -15,13 +15,6 @@ import { Route, Routes,BrowserRouter as Router } from "react-router-dom";
 // fetchProductQuantity(input quantity here to fetch an amount of data).then(data =>console.log(data) )
 // fetchCompanyQuantity(input quantity here to fetch an amount of data).then(data =>console.log(data) )
 
-// endpoints are as follows:
-// https://fakerapi.it/api/v1/products?_quantity=1
-// https://fakerapi.it/api/v1/companies?_quantity=1
-// https://fakerapi.it/api/v1/persons?_quantity=10
-// https://fakerapi.it/api/v1/products
-// https://fakerapi.it/api/v1/companies
-// https://fakerapi.it/api/v1/persons
 
 // check utilities folder for more details on the api functions
 

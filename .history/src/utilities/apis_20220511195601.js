@@ -23,7 +23,7 @@ export const fetchCompanyQuantity = async(quantity) => {
 }
 
 export const fetchProductQuantity = async(quantity) => {
-    const response = await fetch(`https://fakerapi.it/api/v1/products?_quantity=${quantity}`);
+    const response = await fetch(`ttps://fakerapi.it/api/v1/products?_quantity=${quantity}`);
     const data = await response.json();
     return data;
 }

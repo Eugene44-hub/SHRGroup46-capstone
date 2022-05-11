@@ -9,19 +9,16 @@ import { Route, Routes,BrowserRouter as Router } from "react-router-dom";
 
 // API's too have been fetched in utility folder you can import and use with the syntax below
 
-// import { fetchAllData,fetchCompanyQuantity,fetchPersonQuantity,fetchProductQuantity } from "./utilities/apis";
-// fetchAllData(input endpoint here to fetch all data).then(data =>console.log(data) )
-// fetchPersonQuantity(input quantity here to fetch an amount of data).then(data =>console.log(data) )
-// fetchProductQuantity(input quantity here to fetch an amount of data).then(data =>console.log(data) )
-// fetchCompanyQuantity(input quantity here to fetch an amount of data).then(data =>console.log(data) )
-
-// endpoints are as follows:
 // https://fakerapi.it/api/v1/products?_quantity=1
 // https://fakerapi.it/api/v1/companies?_quantity=1
 // https://fakerapi.it/api/v1/persons?_quantity=10
-// https://fakerapi.it/api/v1/products
-// https://fakerapi.it/api/v1/companies
-// https://fakerapi.it/api/v1/persons
+
+import { fetchAllData,fetchCompanyQuantity,fetchPersonQuantity,fetchProductQuantity } from "./utilities/apis";
+fetchAllData("https://fakerapi.it/api/v1/products").then(data =>console.log(data) )
+fetchPersonQuantity(3).then(data =>console.log(data) )
+fetchProductQuantity(5).then(data =>console.log(data) )
+fetchCompanyQuantity(4).then(data =>console.log(data) )
+
 
 // check utilities folder for more details on the api functions
 
