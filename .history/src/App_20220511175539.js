@@ -2,8 +2,6 @@ import { lazy, Suspense } from "react";
 import { Route, Routes,BrowserRouter as Router } from "react-router-dom";
 
 
-//Note: you can use normal import statement on the pages lazy load is for only Routing pages
-
 const Nav=lazy(()=>import('./components/nav/Nav'));
 const Home=lazy(()=>import('./pages/home/Home'));
 const Dashboard=lazy(()=>import('./pages/dashboard/Dashboard'))
