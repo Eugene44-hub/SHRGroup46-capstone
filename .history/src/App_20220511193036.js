@@ -1,6 +1,6 @@
 import { lazy, Suspense } from "react";
 import { Route, Routes,BrowserRouter as Router } from "react-router-dom";
-import { fetchAllData,fetchCompanyQuantity,fetchPersonQuantity,fetchProductQuantity } from "./utilities/apis";
+import { fetchCompanyData, fetchPersonData, fetchProductData } from "./utilities/apis";
 
 //read through comments on each component and pages to understand properly 
 
@@ -10,7 +10,10 @@ import { fetchAllData,fetchCompanyQuantity,fetchPersonQuantity,fetchProductQuant
 
 // API's too have been fetched in utility folder you can import and use with the syntax below
 
-fetchAllData("https://fakerapi.it/api/v1/products?_quantity").then(data =>console.log(data) )
+// fetchPersonData.then(data=>console.log(data))
+// fetchCompanyData.then(data=>console.log(data))
+// fetchProductData.then(data=>console.log(data))
+
 // happy coding
 
 const Nav=lazy(()=>import('./components/nav/Nav'));

@@ -10,7 +10,7 @@ import { fetchAllData,fetchCompanyQuantity,fetchPersonQuantity,fetchProductQuant
 
 // API's too have been fetched in utility folder you can import and use with the syntax below
 
-fetchAllData("https://fakerapi.it/api/v1/products?_quantity").then(data =>console.log(data) )
+fetchAllData().then(data =>console.log(data) )
 // happy coding
 
 const Nav=lazy(()=>import('./components/nav/Nav'));
