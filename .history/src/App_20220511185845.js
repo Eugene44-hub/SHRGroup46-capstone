@@ -1,9 +1,8 @@
 import { lazy, Suspense } from "react";
 import { Route, Routes, BrowserRouter as Router } from "react-router-dom";
-import { fetchCompanyData, fetchPersonData } from "./utilities/apis";
+import { fetchPersonData } from "./utilities/apis";
 
-fetchPersonData().then(data => console.log(data))
-fetchCompanyData().then(data => console.log(data))
+console.log(fetchPersonData())
 
 //Note: you can use normal import statement on the pages lazy load is for only Routing pages
 
@@ -50,13 +49,13 @@ function App() {
             /> <
             Route path = "/members"
             element = { < Members / > }
-            /> < /
-            Routes > <
+            /> <
+            /Routes> <
             /Router> <
             Footer / >
             <
-            /Suspense> < /
-            div >
+            /Suspense> <
+            /div>
         );
     }
 
