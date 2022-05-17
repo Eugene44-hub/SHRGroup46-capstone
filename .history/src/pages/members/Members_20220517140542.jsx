@@ -29,7 +29,7 @@ console.log(members);
 
 <tbody>
   {members&&members.data.map((member,index) => (
-      <tr key={index} style={{backgroundColor:index%2===0?"lightgrey":"black", color:index%2===0?"black":"white"}} className="py-5 shadow-lg mb-5">
+      <tr key={index} style={{backgroundColor:index%2===0?"lightgrey":"black", color:"white"}} className="py-5 shadow-lg mb-5">
       <td className=' text-center text-[.5rem] md:text-[1rem]'>
       {member.firstname} {member.lastname}
       </td>
