@@ -42,8 +42,11 @@ function App() {
   const [members,setMembers]=useState(null)
 
   useEffect(() => {
-    fetchAllData("https://fakerapi.it/api/v1/persons").then(data =>setMembers(data))
+    fetchAllData("https://fakerapi.it/api/v1/persons").then(data =>setMembers(data) )
+console.log(members)
+  
   }, [])
+  
 
   return (
     <div className="App">
@@ -56,7 +59,7 @@ function App() {
 <Route path="/product" element={<Product/>} />
 <Route path="/dashboard" element={<Dashboard/>} />
 <Route path="/login" element={<Login/>} />
-<Route path="/members" element={<Members members={members}/>} />
+<Route path="/members" element={<Members/>} />
 </Routes>
 </Router>
 <Footer/>
