@@ -1,3 +1,4 @@
+import React from 'react'
 import { lazy, Suspense, useEffect, useState } from "react";
 import { Route, Routes,BrowserRouter as Router } from "react-router-dom";
 
@@ -38,7 +39,19 @@ const Footer=lazy(()=>import('./components/footer/Footer'))
 
 
 
+const quantity = 12;
+
 function App() {
+
+  const[products, setProducts] = useState('')
+
+  useEffect(() => {
+    fetchAllData(`https://fakerapi.it/api/v1/products?_quantity=${quantity}`)
+    .then(data => setProducts(data.data))
+   }, [])
+
+
+
   const [members,setMembers]=useState(null)
 
   useEffect(() => {
@@ -53,7 +66,7 @@ function App() {
   <Router>
 <Routes>
 <Route path="/" element={<Home/>} />
-<Route path="/product" element={<Product/>} />
+<Route path="/product" element={<Product products = {products}/>} />
 <Route path="/dashboard" element={<Dashboard/>} />
 <Route path="/login" element={<Login/>} />
 <Route path="/members" element={<Members members={members}/>} />
