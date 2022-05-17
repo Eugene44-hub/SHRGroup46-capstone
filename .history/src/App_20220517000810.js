@@ -39,10 +39,10 @@ const Footer=lazy(()=>import('./components/footer/Footer'))
 
 
 function App() {
-  const [members,setMembers]=useState(null)
+  const [members,setMembers]=useState([])
 
   useEffect(() => {
-    fetchAllData("https://fakerapi.it/api/v1/persons").then(data =>setMembers(data))
+    fetchAllData("https://fakerapi.it/api/v1/persons").then(data =>setMembers([data]))
   }, [])
 
   return (

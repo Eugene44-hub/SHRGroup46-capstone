@@ -1,4 +1,4 @@
-import { lazy, Suspense, useEffect, useState } from "react";
+import { lazy, Suspense } from "react";
 import { Route, Routes,BrowserRouter as Router } from "react-router-dom";
 
 //read through comments on each component and pages to understand properly 
@@ -27,7 +27,6 @@ import { fetchAllData,fetchCompanyQuantity,fetchPersonQuantity,fetchProductQuant
 
 // happy coding
 
-
 const Nav=lazy(()=>import('./components/nav/Nav'));
 const Home=lazy(()=>import('./pages/home/Home'));
 const Dashboard=lazy(()=>import('./pages/dashboard/Dashboard'))
@@ -36,15 +35,10 @@ const Product=lazy(()=>import('./pages/product/Product'))
 const Login=lazy(()=>import('./pages/login/Login'))
 const Footer=lazy(()=>import('./components/footer/Footer'))
 
+fetchPersonQuantity(10).then(data =>console.log(data) )
 
 
 function App() {
-  const [members,setMembers]=useState(null)
-
-  useEffect(() => {
-    fetchAllData("https://fakerapi.it/api/v1/persons").then(data =>setMembers(data))
-  }, [])
-
   return (
     <div className="App">
 
@@ -56,7 +50,7 @@ function App() {
 <Route path="/product" element={<Product/>} />
 <Route path="/dashboard" element={<Dashboard/>} />
 <Route path="/login" element={<Login/>} />
-<Route path="/members" element={<Members members={members}/>} />
+<Route path="/members" element={<Members/>} />
 </Routes>
 </Router>
 <Footer/>

@@ -11,13 +11,11 @@ console.log(members);
   return (
     <section className='my-5'>
     <div className='container'>
-    <header className='md:text-[2rem] text-center font-bold uppercase mb-5'>
+    <header className='text-[2rem] text-center font-bold uppercase mb-5'>
       Team members
     </header>
-<table className='w-full text-white'>
- <thead>
-
-
+<table className='w-[80%] text-white'>
+ 
     <tr className='bg-black border-white'>
       <th className='text-center  py-5 text-[.5rem] md:text-[1rem] uppercase'>fullname</th>
       <th className='text-center py-5 text-[.5rem] md:text-[1rem] uppercase'>gender</th>
@@ -25,11 +23,11 @@ console.log(members);
       <th className='text-center py-5 text-[.5rem] md:text-[1rem] uppercase'>email</th>
       <th className='text-center py-5 text-[.5rem] md:text-[1rem] uppercase'>image</th>
     </tr>
-    </thead>
+ 
 
-<tbody>
+
   {members&&members.data.map((member,index) => (
-      <tr key={index} style={{backgroundColor:index%2===0?"lightgrey":"black", color:index%2===0?"black":"white"}} className="py-5 shadow-lg mb-5">
+      <tr style={{backgroundColor:index%2===0?"white":"black", color:index%2===0?"black":"white"}} className="py-5 mb-5">
       <td className=' text-center text-[.5rem] md:text-[1rem]'>
       {member.firstname} {member.lastname}
       </td>
@@ -47,7 +45,7 @@ console.log(members);
       </td>
       </tr>
       ))}
-</tbody>
+
 
 </table>
     
