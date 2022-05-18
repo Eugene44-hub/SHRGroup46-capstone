@@ -45,7 +45,7 @@ function App() {
   <Nav/>
   <Router>
 <Routes>
-<Route path="/" element={<Home/>} />
+<Route exact path="/" element={<Home/>} />
 <Route path="/product" element={<Product/>} />
 <Route path="/dashboard" element={<Dashboard/>} />
 <Route path="/login" element={<Login/>} />
