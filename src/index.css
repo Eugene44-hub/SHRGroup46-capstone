@@ -8,6 +8,16 @@ body{
     font-family: 'Poppins', sans-serif;
 }
 
+<<<<<<< HEAD
+code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+=======
  @layer components {
     .tax {
       @apply text-sm font-medium
@@ -17,3 +27,4 @@ body{
     }
   } 
    
+>>>>>>> 51a958567b6e7eac65d0c0f8e474ceaa6adab97b

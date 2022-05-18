@@ -60,8 +60,13 @@ function App() {
   <Nav/>
   <Router>
 <Routes>
+<<<<<<< HEAD
+<Route exact path="/" element={<Home/>} />
+<Route path="/product" element={<Product/>} />
+=======
 <Route path="/" element={<Home/>} />
 <Route path="/product" element={<Product products = {products}/>} />
+>>>>>>> 51a958567b6e7eac65d0c0f8e474ceaa6adab97b
 <Route path="/dashboard" element={<Dashboard/>} />
 <Route path="/login" element={<Login/>} />
 <Route path="/members" element={<Members members={members}/>} />
