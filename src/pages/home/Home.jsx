@@ -17,9 +17,7 @@ import { Productdata, Piedata, PieGatewaydata } from "./data";
 // check the sample on nav and footer for css modules
 
 const Home = () => {
-  const [count, setCount] = useState(0);
 
-  // let count = 0;
 
   return (
     <div className={`${styles.body}`}>
