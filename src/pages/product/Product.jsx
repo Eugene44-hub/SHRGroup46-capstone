@@ -25,15 +25,15 @@ const Product = ({products}) => {
                   </div>
                   <div className='flex items-center px-2 bg-white rounded-md justify-between py-1 '>
                       <p className='tax'>Price</p>
-                      <p className='taxPrice'><Currency quantity={product.price} currency="NGN" /></p>
+                      <p className='taxPrice'><Currency quantity={+product.price} currency="NGN" /></p>
                   </div>
                   <div className='flex items-center px-2 rounded-md justify-between py-1 bg-gray-100'>
                       <p className='tax'>Net Price</p>
-                      <p className='taxPrice'><Currency quantity={product.net_price} currency="NGN" /></p>
+                      <p className='taxPrice'><Currency quantity={+product.net_price} currency="NGN" /></p>
                   </div>
                   <div className='flex items-center px-2 rounded-md bg-white justify-between py-1 text-red-600'>
                       <p className='tax'>Tax</p>
-                      <p className='taxPrice'><Currency quantity={product.taxes} currency="NGN" /></p>
+                      <p className='taxPrice'><Currency quantity={+product.taxes} currency="NGN" /></p>
                   </div>
                   
                 </div>

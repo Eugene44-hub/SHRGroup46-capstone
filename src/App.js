@@ -1,6 +1,7 @@
 import React from 'react'
 import { lazy, Suspense, useEffect, useState } from "react";
 import { Route, Routes,BrowserRouter as Router } from "react-router-dom";
+import ProtectedRoute from './components/ProtectedRoute';
 
 //read through comments on each component and pages to understand properly 
 
@@ -65,11 +66,15 @@ function App() {
   <Nav/>
   <Router>
 <Routes>
-<Route path="/" element={<Home/>} />
+
+<Route element={<ProtectedRoute />}>
+    <Route path="/*" element={<Home/>} />
+</Route>
 <Route path="/product" element={<Product products = {products}/>} />
 <Route path="/dashboard" element={<Dashboard/>} />
 <Route path="/login" element={<Login/>} />
 <Route path="/members" element={<Members members={members}/>} />
+
 </Routes>
 </Router>
 <Footer/>

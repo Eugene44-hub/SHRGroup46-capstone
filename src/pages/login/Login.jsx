@@ -1,4 +1,5 @@
 import React from 'react'
+import Logins from '../../components/login/Logins'
 //components should be imported from here if needed
 // make use of your normal import statement here to import components
 // make use of the css module folder or tailwind or you can use inline styles
@@ -7,7 +8,9 @@ import React from 'react'
 
 const Login = () => {
   return (
-    <div className='text-center'>Login</div>
+    <div className="login">
+        <Logins />
+    </div>
   )
 }
 

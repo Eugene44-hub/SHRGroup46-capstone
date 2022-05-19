@@ -6,8 +6,12 @@ import React from 'react'
 
 
 const Home = () => {
+  let Details = JSON.parse(sessionStorage.getItem("Details"))
+
   return (
-    <div className='text-center'>Home</div>
+    <div className='text-center'>
+      <h1>Hello {Details.email} </h1>
+    </div>
   )
 }
 
