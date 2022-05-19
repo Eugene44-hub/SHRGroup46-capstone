@@ -5,7 +5,7 @@ import { Route, Routes,BrowserRouter as Router } from "react-router-dom";
 import loader from "./assests/images/loading.gif"
 
 import ProtectedRoute from './components/ProtectedRoute';
-import Greeting from './components/greeting/Greeting';
+
 
 //read through comments on each component and pages to understand properly 
 
@@ -43,6 +43,7 @@ const Login=lazy(()=>import('./pages/login/Login'))
 
 
 const quantity = 12;
+
 function App() {
 
   const[products, setProducts] = useState('')
@@ -68,8 +69,8 @@ const handleNav=()=>{
 <Routes>
 <Route element={<ProtectedRoute />}>
     <Route path="/*" element={<>
+    <div className='text-center'>eieieit</div>
       <Nav showNav={showNav} handleNav={handleNav}/>
-   <Greeting/>
 
     <Home products={products}/>
     </>
@@ -77,14 +78,10 @@ const handleNav=()=>{
     <Route path="/members" element={
     <>
       <Nav showNav={showNav} handleNav={handleNav}/>
-      <Greeting/>
 
     <Members members={members}/>
     </>} />
-    <Route path="/product" element={<> 
-     <Nav showNav={showNav} handleNav={handleNav}/>
-   <Greeting/>
-
+    <Route path="/product" element={<>  <Nav showNav={showNav} handleNav={handleNav}/>
 <Product products = {products}/></>} />
 </Route>
 <Route path="/login" element={<Login/>} />
