@@ -38,9 +38,9 @@ const Nav = ({showNav,handleNav}) => {
       <div  className={`fixed md:w-[200px] overflow-hidden transition-all ${showNav?"w-[200px]":"w-[0px]"} bg-black z-50 pt-5 top-0 h-full`}>
       <ul>
 
-{navItems.map((navItem,index)=>(<li style={{cursor:"pointer"}} onClick={()=>{navigate(navItem.url); handleNav()}} className='my-5 hover:cursor uppercase font-bold p-3 capitalize transition-all hover:bg-gray-200 hover:text-black'>
- {navItem.item}
-</li>))}
+{navItems.map((navItem,index)=>(
+  <button className='capitalize ' onClick={()=>{navigate(navItem.url); handleNav()}}><li className='my-5 p-3 transition-all hover:bg-gray-200 hover:text-black'>{navItem.item}</li></button>
+))}
 <li>
 
 </li>

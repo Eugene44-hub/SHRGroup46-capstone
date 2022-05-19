@@ -9,7 +9,7 @@ const Home = ({products}) => {
 
 
   return (
- <Dashboard products={products}/>
+ <Home products={products}/>
   );
 };
 

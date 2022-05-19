@@ -34,6 +34,7 @@ const Home=lazy(()=>import('./pages/home/Home'));
 const Members=lazy(()=>import('./pages/members/Members'))
 const Product=lazy(()=>import('./pages/product/Product'))
 const Login=lazy(()=>import('./pages/login/Login'))
+const Footer=lazy(()=>import('./components/footer/Footer'))
 
 
 
@@ -66,7 +67,7 @@ const handleNav=()=>{
 <Routes>
 <Route path="/" element={<Home products={products}/>} />
 <Route path="/product" element={<Product products = {products}/>} />
-
+<Route path="/dashboard" element={<Home/>} />
 <Route path="/login" element={<Login/>} />
 <Route path="/members" element={<Members members={members}/>} />
 </Routes>

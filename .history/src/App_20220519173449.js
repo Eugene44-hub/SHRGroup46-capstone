@@ -31,9 +31,11 @@ import { fetchAllData,fetchCompanyQuantity,fetchPersonQuantity,fetchProductQuant
 
 const Nav=lazy(()=>import('./components/nav/Nav'));
 const Home=lazy(()=>import('./pages/home/Home'));
+const Dashboard=lazy(()=>import('./pages/dashboard/Dashboard'))
 const Members=lazy(()=>import('./pages/members/Members'))
 const Product=lazy(()=>import('./pages/product/Product'))
 const Login=lazy(()=>import('./pages/login/Login'))
+const Footer=lazy(()=>import('./components/footer/Footer'))
 
 
 
@@ -64,15 +66,15 @@ const handleNav=()=>{
 
     <div className='md:ml-[200px] ml-0'>
 <Routes>
-<Route path="/" element={<Home products={products}/>} />
+<Route path="/" element={<Home/>} />
 <Route path="/product" element={<Product products = {products}/>} />
-
+<Route path="/dashboard" element={<Dashboard/>} />
 <Route path="/login" element={<Login/>} />
 <Route path="/members" element={<Members members={members}/>} />
 </Routes>
 </div>
 </Router>
-
+<Footer/>
 </Suspense>
     </div>
   );

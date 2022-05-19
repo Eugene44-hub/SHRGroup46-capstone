@@ -1,7 +1,7 @@
 import React from 'react'
 import { lazy, Suspense, useEffect, useState } from "react";
 import { Route, Routes,BrowserRouter as Router } from "react-router-dom";
-import loader from "./assests/images/loading.gif"
+
 //read through comments on each component and pages to understand properly 
 
 // only tailwind and css modules are used in this project, any additional libraries should be told to the lead before installation
@@ -31,9 +31,11 @@ import { fetchAllData,fetchCompanyQuantity,fetchPersonQuantity,fetchProductQuant
 
 const Nav=lazy(()=>import('./components/nav/Nav'));
 const Home=lazy(()=>import('./pages/home/Home'));
+const Dashboard=lazy(()=>import('./pages/dashboard/Dashboard'))
 const Members=lazy(()=>import('./pages/members/Members'))
 const Product=lazy(()=>import('./pages/product/Product'))
 const Login=lazy(()=>import('./pages/login/Login'))
+const Footer=lazy(()=>import('./components/footer/Footer'))
 
 
 
@@ -49,30 +51,22 @@ function App() {
     fetchAllData("https://fakerapi.it/api/v1/persons").then(data =>setMembers(data))
   }, [])
 
-const [showNav,setShowNav]=useState(false)
-
-const handleNav=()=>{
-  setShowNav(!showNav)
-}
-
   return (
     <div className="App">
 
-<Suspense fallback={<div className='fixed h-full w-full flex'><img src={loader} className='m-auto' alt="" /></div>}>
+<Suspense fallback={<h1>Loading...</h1>}>
   <Router>
-  <Nav showNav={showNav} handleNav={handleNav}/>
+  <Nav/>
 
-    <div className='md:ml-[200px] ml-0'>
 <Routes>
-<Route path="/" element={<Home products={products}/>} />
+<Route path="/" element={<Home/>} />
 <Route path="/product" element={<Product products = {products}/>} />
-
+<Route path="/dashboard" element={<Dashboard/>} />
 <Route path="/login" element={<Login/>} />
 <Route path="/members" element={<Members members={members}/>} />
 </Routes>
-</div>
 </Router>
-
+<Footer/>
 </Suspense>
     </div>
   );

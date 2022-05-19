@@ -66,7 +66,7 @@ const handleNav=()=>{
 <Routes>
 <Route path="/" element={<Home products={products}/>} />
 <Route path="/product" element={<Product products = {products}/>} />
-
+<Route path="/dashboard" element={<Home/>} />
 <Route path="/login" element={<Login/>} />
 <Route path="/members" element={<Members members={members}/>} />
 </Routes>
