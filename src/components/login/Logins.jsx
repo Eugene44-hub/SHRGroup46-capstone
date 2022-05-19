@@ -40,8 +40,8 @@ const Logins = () => {
 
   
   return (
-    <section className="fixed h-full w-full flex">
-<div className={`${styles.container} logins w-[23rem]  md:w-[35rem] m-auto bg-transparent py-8 px-4 md:px-6 rounded-md`}>
+    <section className="fixed h-full w-full flex px-2">
+<div className={`${styles.container} logins w-full  md:w-[35rem] m-auto bg-transparent py-8 px-4 md:px-6 rounded-md`}>
         <h1 className='text-3xl font-semibold text-center text-white mb-6'>Login</h1>
         <form onSubmit={handleSumbit} className='text-center'>
             <div className=' items-center flex bg-white px-2 rounded-md'>
