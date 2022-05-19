@@ -49,7 +49,7 @@ const Logins = () => {
                 <input className='flex-1 text-lg py-2 sm:px-4   rounded-md outline-none' name='email'  type="email" placeholder='Email' onChange={handleChange} required/>
             </div>
             <div className=' items-center flex bg-white px-2 mt-6 rounded-md'>
-                <RiLockPasswordFill size={15}/>
+                <RiLockPasswordFill size={20}/>
                 <input className='flex-1 text-lg py-2 sm:px-4  rounded-md outline-none' name='password'  type="password" placeholder='Password' onChange={handleChange} required/>
             </div>
             
