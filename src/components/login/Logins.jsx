@@ -45,11 +45,11 @@ const Logins = () => {
         <h1 className='text-3xl font-semibold text-center text-white mb-6'>Login</h1>
         <form onSubmit={handleSumbit} className='text-center'>
             <div className=' items-center flex bg-white px-2 rounded-md'>
-                <FaUserAlt size={15} className="xs:mr-2 md:mr-0"/>
+                <FaUserAlt size={15} className="mr-2 md:mr-0"/>
                 <input className='flex-1 text-lg py-2 sm:px-4   rounded-md outline-none' name='email'  type="email" placeholder='Email' onChange={handleChange} required/>
             </div>
             <div className=' items-center flex bg-white px-2 mt-6 rounded-md'>
-                <RiLockPasswordFill size={15} className="xs:mr-2 md:mr-0"/>
+                <RiLockPasswordFill size={15} className="mr-2 md:mr-0"/>
                 <input className='flex-1 text-lg py-2 sm:px-4  rounded-md outline-none' name='password'  type="password" placeholder='Password' onChange={handleChange} required/>
             </div>
             
