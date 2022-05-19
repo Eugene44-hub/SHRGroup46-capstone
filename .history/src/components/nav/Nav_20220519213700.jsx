@@ -31,7 +31,7 @@ const Nav = ({showNav,handleNav}) => {
         </p>
       </h1>
 
-      <button onClick={handleNav} >
+      <button onClick={handleNav} className=''>
  <FaBars/>
       </button>
       </header>

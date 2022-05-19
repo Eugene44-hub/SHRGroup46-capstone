@@ -9,7 +9,7 @@ const Members = ({members}) => {
 
 console.log(members);
   return (
-    <section className="md:ml-[200px] p-[20px] ml-0 my-5">
+    <section className="md:ml-[200px] ml-0 my-5">
     <div className='container'>
     <header className='md:text-[2rem] text-center font-bold uppercase mb-5'>
       Team members

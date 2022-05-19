@@ -19,7 +19,6 @@ const navItems=[{
   url:'/login'
 }]
 const Nav = ({showNav,handleNav}) => {
-
   const navigate=useNavigate()
   return (
     <nav className={`${styles.nav}`}>
@@ -31,7 +30,7 @@ const Nav = ({showNav,handleNav}) => {
         </p>
       </h1>
 
-      <button onClick={handleNav} >
+      <button onClick={handleNav} className=''>
  <FaBars/>
       </button>
       </header>
@@ -39,10 +38,7 @@ const Nav = ({showNav,handleNav}) => {
       <div  className={`fixed md:w-[200px] overflow-hidden transition-all ${showNav?"w-[200px]":"w-[0px]"} bg-black z-50 pt-5 top-0 h-full`}>
       <ul>
 
-{navItems.map((navItem,index)=>(<li style={{cursor:"pointer"}} onClick={()=>{
-  navItem.item!=="logout"?navigate(navItem.url):sessionStorage.clear();  handleNav()
-}
-  } className='my-5 hover:cursor uppercase font-bold p-3 capitalize transition-all hover:bg-gray-200 hover:text-black'>
+{navItems.map((navItem,index)=>(<li style={{cursor:"pointer"}} onClick={()=>{navItem!=="logout"?navigate(navItem.url):sessionStorage.clear();  handleNav()}} className='my-5 hover:cursor uppercase font-bold p-3 capitalize transition-all hover:bg-gray-200 hover:text-black'>
  {navItem.item}
 </li>))}
 <li>

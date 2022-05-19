@@ -65,28 +65,26 @@ const handleNav=()=>{
 
 <Suspense fallback={<div className='fixed h-full w-full flex'><img src={loader} className='m-auto' alt="" /></div>}>
   <Router>
-    <div className=''>
+
+    <div className='md:ml-[200px] ml-0'>
 <Routes>
+
+
 <Route element={<ProtectedRoute />}>
-    <Route path="/*" element={<>
-      <Nav showNav={showNav} handleNav={handleNav}/>
+<Nav showNav={showNav} handleNav={handleNav}/>
 
-    <Home products={products}/>
-    </>
-    } />
-    <Route path="/members" element={
-    <>
-      <Nav showNav={showNav} handleNav={handleNav}/>
+    <Route path="/*" element={<Home products={products}/>} />
+    <Route path="/product" element={<Product products = {products}/>} />
+<Route path="/members" element={<Members members={members}/>} />
 
-    <Members members={members}/>
-    </>} />
-    <Route path="/product" element={<>  <Nav showNav={showNav} handleNav={handleNav}/>
-<Product products = {products}/></>} />
 </Route>
 <Route path="/login" element={<Login/>} />
+
+
 </Routes>
 </div>
 </Router>
+
 </Suspense>
     </div>
   );
